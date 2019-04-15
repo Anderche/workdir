@@ -24,20 +24,6 @@ class HotelsController < ApplicationController
     end
 	end
 
-
-	# def edit; end
-
- #  def update
- #    @event.update(event_params)
-
-    # if @hotel.save
-    #   event_friends(params[:emails], @event)
-    #   redirect_to events_path
-    # else
-    #   render 'edit'
-    # end
- #  end
-
 	def edit # GET /hotels/:id/edit
 	end
 
