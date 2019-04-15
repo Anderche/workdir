@@ -1,11 +1,6 @@
 rails generate model Review content:text restaurant:references
 
-
-
 rails generate model Hotel content:text restaurant:references
-
-
-
 
 
 ---- ---- -----  TEST  ---- ---- ----
@@ -35,3 +30,20 @@ To show us the project and evaluate it, load all the sources on a public repo. I
 
 
 ---- ---- ---- ---- ---- ---- ----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
