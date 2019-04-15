@@ -10,35 +10,45 @@ class HotelsController < ApplicationController
 		@hotel = Hotel.find(params[:id])
 	end
 
-  # def new
-  #   @event = Event.new
-  # end
-
-  # def create
-  #   @event = Event.new(event_params)
-
-  #   if @event.save
-  #     UserEvent.create(user: current_user, event: @event, status: 'admin')
-  #     event_friends(params[:emails], @event)
-  #     redirect_to events_path
-  #   else
-  #     render 'new'
-  #   end
-  # end
-
 	def new # GET /hotels/new
 		@hotel = Hotel.new
 	end
 
 	def create # POST /hotels
 		@hotel = Hotel.new(hotel_params)
-		@hotel.save
+		
+		if @hotel.save
+			redirect_to hotels_path
+		else
+      render 'new'
+    end
 	end
+
+
+	# def edit; end
+
+ #  def update
+ #    @event.update(event_params)
+
+    # if @hotel.save
+    #   event_friends(params[:emails], @event)
+    #   redirect_to events_path
+    # else
+    #   render 'edit'
+    # end
+ #  end
 
 	def edit # GET /hotels/:id/edit
 	end
 
 	def update # PATCH /hotels/:id
+		@hotel.update(hotel_params)
+
+		if @hotel.save
+      redirect_to hotels_path
+    else
+      render 'edit'
+    end
 	end
 
 	def destroy # DELETE /hotels/:id
