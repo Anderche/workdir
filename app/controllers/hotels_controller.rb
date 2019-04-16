@@ -38,6 +38,8 @@ class HotelsController < ApplicationController
 	end
 
 	def destroy # DELETE /hotels/:id
+		@hotel.destroy
+    redirect_to hotels_path
 	end
 
 
