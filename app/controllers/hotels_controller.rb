@@ -3,7 +3,7 @@ class HotelsController < ApplicationController
 	before_action :set_hotel, only: %i[show edit update destroy]
 
 	def index # GET /hotels
-		@hotel = Hotel.all
+		@hotels = Hotel.all
 	end
 
 	def show # GET /hotels/:id
@@ -38,14 +38,12 @@ class HotelsController < ApplicationController
 	end
 
 	def destroy # DELETE /hotels/:id
+		@hotel.destroy
+    redirect_to hotels_path
 	end
 
 
 	private
-
-	# def user_events_filter(preference)
-	# 	current_user.user_events.where(status: preference).map(&:event).reverse
-	# end
 
 	def set_hotel
 		@hotel = Hotel.find(params[:id])
