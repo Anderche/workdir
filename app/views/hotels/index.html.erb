@@ -4,10 +4,10 @@
 
 <div class="body">	
   <ul>
-		<% @hotel.each do |hotel| %>
+		<% @hotels.each do |hotel| %>
 			<li> 
 				<%= hotel.name %> 
-				<%= link_to "View", hotels_path %>
+				<%= link_to "View", hotel_path(hotel) %>
 			</li>
 		<% end %>
 	</ul>
