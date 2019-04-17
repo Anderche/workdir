@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'simple_form'
+gem 'i18n-tasks', '~> 0.9.29'
 
 # frontend gems
 gem 'bootstrap-sass'

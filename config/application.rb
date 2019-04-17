@@ -11,5 +11,12 @@ module Workdir
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    config.i18n.enforce_available_locales = false
+		config.i18n.available_locales = [:en, :it_IT, :es_US, :en_UK]
+		
+		# COMMENTED OUT due to error message when running 'rails s' in terminal:
+		# config.i18n.default_locale = [:en]
+
   end
 end
