@@ -31,19 +31,3 @@ To show us the project and evaluate it, load all the sources on a public repo. I
 
 ---- ---- ---- ---- ---- ---- ----
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
