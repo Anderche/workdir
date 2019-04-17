@@ -8,10 +8,11 @@
 			<li> 
 				<%= hotel.name %> 
 				<%= link_to "View", hotel_path(hotel) %>
+				<%= link_to "Remove Hotel", hotel_path(hotel), method: :delete %>
 			</li>
 		<% end %>
 	</ul>
-
+	
 	<%= link_to new_hotel_path do  %>
 			<button type="button" class="btn btn-primary">Add a Hotel</button>
 	<% end %>

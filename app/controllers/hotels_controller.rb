@@ -42,7 +42,6 @@ class HotelsController < ApplicationController
     redirect_to hotels_path
 	end
 
-
 	private
 
 	def set_hotel
@@ -52,5 +51,4 @@ class HotelsController < ApplicationController
 	def hotel_params
 		params.require(:hotel).permit(:name, :country_code, :description)
 	end
-
 end
