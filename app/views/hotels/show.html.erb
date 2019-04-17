@@ -1,10 +1,31 @@
+<div class="container">
+	<h1><%= @hotel.name %></h1>	
 
-<h1><%= @hotel.name %></h1>	
-<p><%= @hotel.country_code %></p>
-<p><%= @hotel.description %></p>
+	<h4>Country</h4>
+	<p><%= @hotel.country_code %></p>
 
-<div>
-	<%= link_to "edit", edit_hotel_path %>
+	<h4>Description</h4>
+	<p><%= @hotel.description %></p>
+
+	<!-- REFERENCE locales == it_IT, es_US, en_UK -->
+
+	<%= content_tag :li do %>
+	  <%= link_to 'Description in Italian', locale: :it_IT %>
+	<% end unless current_page?(locale: :ja) %>
+
+	<%= content_tag :li do %>
+	  <%= link_to 'Description in Spanish', locale: :es_US %>
+	<% end unless current_page?(locale: :es_US) %>
+
+	<%= content_tag :li do %>
+	  <%= link_to 'Description in English', locale: :en_UK %>
+	<% end unless current_page?(locale: :en_UK) %>
+
+	<div>
+		<%= link_to "edit", edit_hotel_path %>
+	</div>
+
+	<div>
+		<%= link_to "back to all hotels", hotels_path %>
+	</div>	
 </div>
-
-<%= link_to "back to all hotels", hotels_path %>
