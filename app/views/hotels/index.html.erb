@@ -1,19 +1,21 @@
-<h1>Hotels</h1>
+<div class="container">
+	<h1>Hotels</h1>
 
-<h3>View all of our hotel properties</h3>
+	<h3>View all of our hotel properties</h3>
 
-<div class="body">	
-  <ul>
-		<% @hotels.each do |hotel| %>
-			<li> 
-				<%= hotel.name %> 
-				<%= link_to "View", hotel_path(hotel) %>
-				<%= link_to "Remove Hotel", hotel_path(hotel), method: :delete %>
-			</li>
+	<div class="body">	
+	  <ul>
+			<% @hotels.each do |hotel| %>
+				<li> 
+					<%= hotel.name %> 
+					<%= link_to "View", hotel_path(hotel) %>
+					<%= link_to "Remove Hotel", hotel_path(hotel), method: :delete %>
+				</li>
+			<% end %>
+		</ul>
+		
+		<%= link_to new_hotel_path do  %>
+				<button type="button" class="btn btn-primary">Add a Hotel</button>
 		<% end %>
-	</ul>
-	
-	<%= link_to new_hotel_path do  %>
-			<button type="button" class="btn btn-primary">Add a Hotel</button>
-	<% end %>
+	</div>
 </div>
